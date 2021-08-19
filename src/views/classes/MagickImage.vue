@@ -20,29 +20,34 @@ ImageMagick.readFromCanvas(canvas, (image) =>
     <button v-on:click="blur()">Blur</button>
   </div>
 
-  <canvas ref="myDiv"></canvas>
+  <Canvas ref="canvas" />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import { ImageMagick } from '@imagemagick/magick-wasm/image-magick'
 import CodeSample from '@/components/CodeSample.vue'
+import Canvas from '@/components/Canvas.vue'
 
 @Options({
   components: {
     CodeSample,
+    Canvas
   }
 })
 export default class MagickImageView extends Vue {
   load(image: string): void {
-    ImageMagick.read(image, (image) => image.writeToCanvas(this.$refs.myDiv as HTMLCanvasElement))
+    ImageMagick.read(image, (image) => this.getCanvas().write(image) )
   }
   blur(): void {
-    const canvas = this.$refs.myDiv as HTMLCanvasElement
-    ImageMagick.readFromCanvas(canvas, (image) => {
+    const canvas = this.getCanvas()
+    canvas.read((image) => {
       image.blur()
-      image.writeToCanvas(canvas)
+      canvas.write(image)
     })
+  }
+  private getCanvas() {
+    return this.$refs.canvas as Canvas
   }
 }
 </script>
