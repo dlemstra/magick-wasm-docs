@@ -16,5 +16,5 @@ initializeImageMagick().then(() => {
     .mount('#app')
 
 }).catch(err => {
-  console.error(err)
+  throw err
 })
