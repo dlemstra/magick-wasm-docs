@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+    - main
+    tags:
+    - '!*'
+  pull_request:
+    branches:
+    - main
+
+name: main
+jobs:
+  update_github_pages:
+    name: Update github pages
+    container:
+      image: ubuntu:bionic
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run lint
+      run: npm run lint
