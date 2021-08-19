@@ -37,7 +37,7 @@ import CodeSample from '@/components/CodeSample.vue'
     },
     blur: function()
     {
-      const canvas = this.$refs.myDiv as HTMLCanvasElement;
+      const canvas = this.$refs.myDiv as HTMLCanvasElement
       ImageMagick.readFromCanvas(canvas, (image) =>
       {
         image.blur()
