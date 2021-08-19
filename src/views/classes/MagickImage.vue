@@ -31,22 +31,18 @@ import CodeSample from '@/components/CodeSample.vue'
 @Options({
   components: {
     CodeSample,
-  },
-  methods: {
-    load: function(image: string)
-    {
-      ImageMagick.read(image, (image) => image.writeToCanvas(this.$refs.myDiv as HTMLCanvasElement))
-    },
-    blur: function()
-    {
-      const canvas = this.$refs.myDiv as HTMLCanvasElement
-      ImageMagick.readFromCanvas(canvas, (image) =>
-      {
-        image.blur()
-        image.writeToCanvas(canvas)
-      })
-    }
   }
 })
-export default class MagickImageView extends Vue {}
+export default class MagickImageView extends Vue {
+  load(image: string): void {
+    ImageMagick.read(image, (image) => image.writeToCanvas(this.$refs.myDiv as HTMLCanvasElement))
+  }
+  blur(): void {
+    const canvas = this.$refs.myDiv as HTMLCanvasElement
+    ImageMagick.readFromCanvas(canvas, (image) => {
+      image.blur()
+      image.writeToCanvas(canvas)
+    })
+  }
+}
 </script>
