@@ -17,7 +17,7 @@ export default class Canvas extends Vue {
   write(image: IMagickImage): void {
     image.writeToCanvas(this.getCanvas())
   }
-  getCanvas(): HTMLCanvasElement {
+  private getCanvas() {
     return this.$refs.canvas as HTMLCanvasElement
   }
  }
