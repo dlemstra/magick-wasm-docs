@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <img alt="ImageMagick logo" src="../assets/imagemagick.svg">
-  </div>
+  <div>Page not found</div>
 </template>
 
 <script lang="ts">
