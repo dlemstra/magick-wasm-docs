@@ -13,12 +13,14 @@ ImageMagick.readFromCanvas(canvas, (image) =>
 });</pre>
   </CodeSample>
 
-  <canvas ref="myDiv"></canvas>
   <div>
+    <br />
     <button v-on:click="load('logo:')">Load logo</button>
     <button v-on:click="load('wizard:')">Load wizard</button>
     <button v-on:click="blur()">Blur</button>
   </div>
+
+  <canvas ref="myDiv"></canvas>
 </template>
 
 <script lang="ts">
