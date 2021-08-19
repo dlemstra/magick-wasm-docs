@@ -1,6 +1,6 @@
 root = true
 
-[*.{ts,vue}]
+[*.{ts,js,vue}]
 
 indent_size = 2
 indent_style = space
