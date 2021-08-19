@@ -20,7 +20,7 @@ import CodeSample from '@/components/CodeSample.vue'
 
 function getFormatsArray() {
   return Magick.supportedFormats
-    .map(function(format){
+    .map(function(format) {
       const description = format.description.replace('\'', '\\\'')
       return `  { format: '${format.format}', description: '${description}', isReadable: ${format.isReadable}, isWritable: ${format.isWritable} }`
     }).join(",\n")
