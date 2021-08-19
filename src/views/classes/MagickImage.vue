@@ -13,8 +13,7 @@ ImageMagick.readFromCanvas(canvas, (image) =>
 });</pre>
   </CodeSample>
 
-  <div>
-    <br />
+  <div class="buttons">
     <button v-on:click="load('logo:')">Load logo</button>
     <button v-on:click="load('wizard:')">Load wizard</button>
     <button v-on:click="blur()">Blur</button>
@@ -51,3 +50,9 @@ export default class MagickImageView extends Vue {
   }
 }
 </script>
+
+<style scoped>
+  .buttons {
+    padding: 1em 0 1em 0;
+  }
+</style>
