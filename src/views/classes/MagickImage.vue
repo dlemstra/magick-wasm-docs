@@ -2,16 +2,14 @@
   <h1>MagickImage</h1>
   <h3>.blur()</h3>
 
-  <CodeSample>
-    <pre>import { ImageMagick } from '@imagemagick/magick-wasm/image-magick'
+  <CodeSample code="import { ImageMagick } from '@imagemagick/magick-wasm/image-magick'
 
 const canvas = document.getElementById('canvasId')
 ImageMagick.readFromCanvas(canvas, (image) =>
 {
   image.blur()
   image.writeToCanvas(canvas)
-});</pre>
-  </CodeSample>
+})" />
 
   <div class="buttons">
     <button v-on:click="load('logo:')">Load logo</button>
