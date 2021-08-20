@@ -31,3 +31,12 @@ jobs:
 
     - name: Run build
       run: npm run build
+
+    - name: Publish ghpages branch
+      run: |
+        set -e
+        mv dist /dist
+        git checkout --orphan ghpages
+        git reset --hard
+        cp -R /dist/* .
+        git add .
