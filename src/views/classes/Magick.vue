@@ -1,16 +1,16 @@
 <template>
   <h1>Magick</h1>
   <h3>.delegates</h3>
-  <CodeSample>{{delegates}}</CodeSample>
+  <CodeSample :code=delegates />
 
   <h3>.features</h3>
-  <CodeSample>{{features}}</CodeSample>
+  <CodeSample :code=features />
 
   <h3>.imageMagickVersion</h3>
-  <CodeSample>{{imagemagickVersion}}</CodeSample>
+  <CodeSample :code=imagemagickVersion />
 
   <h3>.supportedFormats</h3>
-  <CodeSample>{{supportedFormats}}</CodeSample>
+  <CodeSample :code=supportedFormats />
 </template>
 
 <script lang="ts">
