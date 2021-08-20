@@ -27,7 +27,7 @@ jobs:
       run: npm run build
 
     - name: Publish ghpages branch
-      if: github.ref == 'refs/heads/mainmain'
+      if: github.ref == 'refs/heads/main'
       run: |
         set -e
         mv dist ..
