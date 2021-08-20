@@ -17,21 +17,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install dependencies
+      run: |
+        set -e
+        apt-get update -y
+        apt-get install -y git
+
     - uses: actions/checkout@v2
 
     - uses: actions/setup-node@v2
       with:
         node-version: '14'
 
-    - name: Install dependencies
+    - name: Run lint
       run: |
         set -e
-        apt-get update -y
-        apt-get install -y git
         npm ci
-
-    - name: Run lint
-      run: npm run lint
+        npm run lint
 
     - name: Run build
       run: npm run build
