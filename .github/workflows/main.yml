@@ -29,9 +29,9 @@ jobs:
     - name: Publish ghpages branch
       run: |
         set -e
-        mv dist /dist
+        mv dist ..
         git checkout --orphan ghpages
         git reset --hard
-        cp -R /dist/* .
+        cp -R ../dist/* .
         git add .
         git commit -m "Updated GitHub pages"
