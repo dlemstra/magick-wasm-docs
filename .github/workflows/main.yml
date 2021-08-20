@@ -34,4 +34,4 @@ jobs:
         git reset --hard
         cp -R ../dist/* .
         git add .
-        git commit -m "Updated GitHub pages"
+        git status
