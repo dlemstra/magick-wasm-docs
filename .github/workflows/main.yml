@@ -39,4 +39,4 @@ jobs:
         git config --global user.name 'Dirk Lemstra'
         git config --global user.email 'dirk@lemstra.org'
         git commit -m "Updated GitHub pages"
-        git push origin ghpages
+        git push --force origin ghpages
