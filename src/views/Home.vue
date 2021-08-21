@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <img alt="ImageMagick logo" src="../assets/imagemagick.svg">
-  </div>
+    <div>
+        <img alt="ImageMagick logo" src="../assets/imagemagick.svg">
+    </div>
 </template>
 
 <script lang="ts">

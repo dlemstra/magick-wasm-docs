@@ -1,23 +1,22 @@
 <template>
-  <h1>MagickImage</h1>
-  <h3>.blur()</h3>
+    <h1>MagickImage</h1>
+    <h3>.blur()</h3>
 
-  <CodeSample code="import { ImageMagick } from '@imagemagick/magick-wasm/image-magick'
+     <CodeSample code="import { ImageMagick } from '@imagemagick/magick-wasm/image-magick'
 
 const canvas = document.getElementById('canvasId')
-ImageMagick.readFromCanvas(canvas, (image) =>
-{
-  image.blur()
-  image.writeToCanvas(canvas)
+ImageMagick.readFromCanvas(canvas, (image) => {
+    image.blur()
+    image.writeToCanvas(canvas)
 })" />
 
-  <div class="buttons">
-    <button v-on:click="load('logo:')">Load logo</button>
-    <button v-on:click="load('wizard:')">Load wizard</button>
-    <button v-on:click="blur()">Blur</button>
-  </div>
+    <div class="buttons">
+        <button v-on:click="load('logo:')">Load logo</button>
+        <button v-on:click="load('wizard:')">Load wizard</button>
+        <button v-on:click="blur()">Blur</button>
+    </div>
 
-  <Canvas ref="canvas" />
+    <Canvas ref="canvas" />
 </template>
 
 <script lang="ts">
@@ -27,32 +26,32 @@ import CodeSample from '@/components/CodeSample.vue'
 import Canvas from '@/components/Canvas.vue'
 
 @Options({
-  components: {
-    CodeSample,
-    Canvas
-  }
+    components: {
+        CodeSample,
+        Canvas
+    }
 })
 export default class MagickImageView extends Vue {
-  load(image: string): void {
-    ImageMagick.read(image, (image) => this.getCanvas().write(image) )
-  }
+    load(image: string): void {
+        ImageMagick.read(image, (image) => this.getCanvas().write(image) )
+    }
 
-  blur(): void {
-    const canvas = this.getCanvas()
-    canvas.read((image) => {
-      image.blur()
-      canvas.write(image)
-    })
-  }
+    blur(): void {
+        const canvas = this.getCanvas()
+        canvas.read((image) => {
+            image.blur()
+            canvas.write(image)
+        })
+    }
 
-  private getCanvas() {
-    return this.$refs.canvas as Canvas
-  }
+    private getCanvas() {
+        return this.$refs.canvas as Canvas
+    }
 }
 </script>
 
 <style scoped>
-  .buttons {
+.buttons {
     padding: 1em 0 1em 0;
-  }
+}
 </style>

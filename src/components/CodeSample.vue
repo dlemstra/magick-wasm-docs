@@ -1,5 +1,5 @@
 <template>
-  <ssh-pre language="js" :dark=true>{{code}}</ssh-pre>
+    <ssh-pre language="js" :dark=true>{{code}}</ssh-pre>
 </template>
 
 <script lang="ts">
@@ -8,25 +8,25 @@ import { Options, Vue } from 'vue-class-component'
 import SshPre from 'simple-syntax-highlighter'
 
 @Options({
-  components: {
-    SshPre
-  },
-  props: {
-    code: String
-  }
+    components: {
+        SshPre
+    },
+    props: {
+        code: String
+    }
 })
 export default class CodeSample extends Vue {}
 </script>
 
 <style>
 @font-face {
-  font-family: 'Hack';
-  src: url('../assets/fonts/Hack-Regular.ttf') format('truetype')
+    font-family: 'Hack';
+    src: url('../assets/fonts/Hack-Regular.ttf') format('truetype')
 }
 
 .ssh-pre__content
 {
-  font-family: 'Hack', 'monospace';
-  font-size: 9pt;
+    font-family: 'Hack', 'monospace';
+    font-size: 9pt;
 }
 </style>

@@ -19,24 +19,24 @@ import { Magick } from '@imagemagick/magick-wasm/magick'
 import CodeSample from '@/components/CodeSample.vue'
 
 @Options({
-  components: {
-    CodeSample,
-  },
-  computed: {
-  }
+    components: {
+        CodeSample,
+    },
+    computed: {
+    }
 })
 export default class MagickView extends Vue {
-  delegates(): string { return `> '${Magick.delegates}'` }
-  features(): string { return `> '${Magick.features}'` }
-  imagemagickVersion(): string { return `> '${Magick.imageMagickVersion}'` }
-  supportedFormats(): string { return `[\n${this.getFormatsArray()}\n]` }
+    delegates(): string { return `> '${Magick.delegates}'` }
+    features(): string { return `> '${Magick.features}'` }
+    imagemagickVersion(): string { return `> '${Magick.imageMagickVersion}'` }
+    supportedFormats(): string { return `[\n${this.getFormatsArray()}\n]` }
 
-  private getFormatsArray() {
-    return Magick.supportedFormats
-      .map(function(format) {
-        const description = format.description.replace('\'', '\\\'')
-        return `  { format: '${format.format}', description: '${description}', isReadable: ${format.isReadable}, isWritable: ${format.isWritable} }`
-      }).join(",\n")
-  }
+    private getFormatsArray() {
+        return Magick.supportedFormats
+            .map(function(format) {
+                const description = format.description.replace('\'', '\\\'')
+                return `  { format: '${format.format}', description: '${description}', isReadable: ${format.isReadable}, isWritable: ${format.isWritable} }`
+            }).join(",\n")
+    }
 }
 </script>
