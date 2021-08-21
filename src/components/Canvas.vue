@@ -41,23 +41,32 @@ export default class Canvas extends Vue {
         this.write(image)
       })
     } catch (exception) {
-      // unable to read file
+      const settings = Canvas.createReadSettings()
+      settings.fontPointsize = 20
+      ImageMagick.read(`caption:${exception}`, settings, (image) => {
+        image.extent(image.width + 50, 400, Gravity.Center)
+        this.write(image)
+      });
     }
   }
   private getCanvas() {
     return this.$refs.canvas as HTMLCanvasElement
   }
   private static createDropAreaImage() {
-    const settings = new MagickReadSettings()
-    settings.font = 'Hack'
-    settings.backgroundColor = new MagickColor('pink')
-    settings.fillColor = new MagickColor('black')
+    const settings = Canvas.createReadSettings()
     settings.fontPointsize = 40
 
     const image = MagickImage.create()
     image.read('label:Drop file here', settings)
     image.extent(400, 400, Gravity.Center)
     return image
+  }
+  private static createReadSettings() {
+    const settings = new MagickReadSettings()
+    settings.font = 'Hack'
+    settings.backgroundColor = new MagickColor('pink')
+    settings.fillColor = new MagickColor('black')
+    return settings
   }
  }
 </script>
