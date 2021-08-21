@@ -43,6 +43,7 @@ export default class Canvas extends Vue {
     } catch (exception) {
       const settings = Canvas.createReadSettings()
       settings.fontPointsize = 20
+
       ImageMagick.read(`caption:${exception}`, settings, (image) => {
         image.extent(image.width + 50, 400, Gravity.Center)
         this.write(image)
