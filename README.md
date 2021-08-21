@@ -1,5 +1,7 @@
 # magick-wasm-docs
 
+Documentation for the [@imagemagick/magick-wasm](https://www.npmjs.com/package/@imagemagick/magick-wasm) library. The documentation can be found here: https://dlemstra.github.io/magick-wasm-docs/
+
 ## Project setup
 ```
 npm install
