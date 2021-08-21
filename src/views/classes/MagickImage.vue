@@ -36,6 +36,7 @@ export default class MagickImageView extends Vue {
   load(image: string): void {
     ImageMagick.read(image, (image) => this.getCanvas().write(image) )
   }
+
   blur(): void {
     const canvas = this.getCanvas()
     canvas.read((image) => {
@@ -43,6 +44,7 @@ export default class MagickImageView extends Vue {
       canvas.write(image)
     })
   }
+
   private getCanvas() {
     return this.$refs.canvas as Canvas
   }

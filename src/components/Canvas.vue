@@ -19,12 +19,15 @@ export default class Canvas extends Vue {
       func(image)
     })
   }
+
   write(image: IMagickImage): void {
     image.writeToCanvas(this.getCanvas())
   }
+
   mounted(): void {
     this.write(Canvas.dropAreaImage)
   }
+
   private async onDrop(event: DragEvent) {
     const files = event.dataTransfer?.files
     if (files === null)
@@ -50,9 +53,8 @@ export default class Canvas extends Vue {
       });
     }
   }
-  private getCanvas() {
-    return this.$refs.canvas as HTMLCanvasElement
-  }
+
+  private getCanvas() { return this.$refs.canvas as HTMLCanvasElement }
   private static createDropAreaImage() {
     const settings = Canvas.createReadSettings()
     settings.fontPointsize = 40
@@ -62,6 +64,7 @@ export default class Canvas extends Vue {
     image.extent(400, 400, Gravity.Center)
     return image
   }
+
   private static createReadSettings() {
     const settings = new MagickReadSettings()
     settings.font = 'Hack'
