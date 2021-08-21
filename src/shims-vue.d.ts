@@ -5,4 +5,9 @@ declare module '*.vue' {
   export default component
 }
 
+declare module '*.ttf' {
+  const file: string
+  export default file
+}
+
 declare module 'simple-syntax-highlighter'
