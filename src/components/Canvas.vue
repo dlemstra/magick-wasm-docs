@@ -4,11 +4,16 @@
 
 <script lang="ts">
 import 'simple-syntax-highlighter/dist/sshpre.css'
+import { Gravity } from '@imagemagick/magick-wasm/gravity';
 import { ImageMagick } from '@imagemagick/magick-wasm'
-import { IMagickImage } from '@imagemagick/magick-wasm/magick-image'
+import { IMagickImage, MagickImage } from '@imagemagick/magick-wasm/magick-image'
+import { MagickColor } from '@imagemagick/magick-wasm/magick-color';
+import { MagickReadSettings } from '@imagemagick/magick-wasm/settings/magick-read-settings';
 import { Vue } from 'vue-class-component'
 
 export default class Canvas extends Vue {
+  static dropAreaImage = Canvas.createDropAreaImage();
+
   read(func: (image: IMagickImage) => void): void {
     ImageMagick.readFromCanvas(this.getCanvas(), (image) => {
       func(image)
@@ -18,16 +23,7 @@ export default class Canvas extends Vue {
     image.writeToCanvas(this.getCanvas())
   }
   mounted(): void {
-    const canvas = this.getCanvas()
-    canvas.width = 400
-    canvas.height = 400
-
-    const ctx = canvas.getContext("2d")
-    if (ctx === null)
-      return
-
-    ctx.fillStyle = 'rgb(219, 97, 162)'
-    ctx.fillRect(0, 0, canvas.width, canvas.height)
+    this.write(Canvas.dropAreaImage)
   }
   private async onDrop(event: DragEvent) {
     const files = event.dataTransfer?.files
@@ -50,6 +46,18 @@ export default class Canvas extends Vue {
   }
   private getCanvas() {
     return this.$refs.canvas as HTMLCanvasElement
+  }
+  private static createDropAreaImage() {
+    const settings = new MagickReadSettings()
+    settings.font = 'Hack'
+    settings.backgroundColor = new MagickColor('pink')
+    settings.fillColor = new MagickColor('black')
+    settings.fontPointsize = 40
+
+    const image = MagickImage.create()
+    image.read('label:Drop file here', settings)
+    image.extent(400, 400, Gravity.Center)
+    return image
   }
  }
 </script>
