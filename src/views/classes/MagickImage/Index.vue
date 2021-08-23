@@ -3,7 +3,8 @@
 
     <div class="container">
         <div>
-            <router-link to="/classes/magick-image/blur">blur</router-link>
+            <router-link to="/classes/magick-image/blur">blur</router-link> |
+            <router-link to="/classes/magick-image/charcoal">charcoal</router-link>
             <router-view @showExample="showExample" />
         </div>
         <div>
