@@ -1,33 +1,29 @@
 <template>
     <h1>MagickImage</h1>
-    <h3>.blur()</h3>
 
-     <CodeSample code="import { ImageMagick } from '@imagemagick/magick-wasm/image-magick'
-
-const canvas = document.getElementById('canvasId')
-ImageMagick.readFromCanvas(canvas, (image) => {
-    image.blur()
-    image.writeToCanvas(canvas)
-})" />
-
-    <div class="buttons">
-        <button v-on:click="load('logo:')">Load logo</button>
-        <button v-on:click="load('wizard:')">Load wizard</button>
-        <button v-on:click="blur()">Blur</button>
+    <div class="container">
+        <div>
+            <router-link to="/classes/magick-image/blur">blur</router-link>
+            <router-view @showExample="showExample" />
+        </div>
+        <div>
+            <div class="buttons">
+                <button v-on:click="load('logo:')">Load logo</button>
+                <button v-on:click="load('wizard:')">Load wizard</button>
+            </div>
+            <Canvas ref="canvas" />
+        </div>
     </div>
-
-    <Canvas ref="canvas" />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import { ImageMagick } from '@imagemagick/magick-wasm/image-magick'
-import CodeSample from '@/components/CodeSample.vue'
+import { MagickExample } from '@/magick-example'
 import Canvas from '@/components/Canvas.vue'
 
 @Options({
     components: {
-        CodeSample,
         Canvas
     }
 })
@@ -36,10 +32,10 @@ export default class MagickImageView extends Vue {
         ImageMagick.read(image, (image) => this.getCanvas().write(image) )
     }
 
-    blur(): void {
+    showExample(example: MagickExample): void {
         const canvas = this.getCanvas()
         canvas.read((image) => {
-            image.blur()
+            example.changeImage(image)
             canvas.write(image)
         })
     }
@@ -51,7 +47,14 @@ export default class MagickImageView extends Vue {
 </script>
 
 <style scoped>
-.buttons {
+.container {
+    display: flex;
+}
+.container div {
+    padding: 0 1em 0 1em;
+    flex: 0 1 50%;
+}
+.container .buttons {
     padding: 1em 0 1em 0;
 }
 </style>
