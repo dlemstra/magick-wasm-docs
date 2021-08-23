@@ -19,11 +19,6 @@ export default class CodeSample extends Vue {}
 </script>
 
 <style>
-@font-face {
-    font-family: 'Hack';
-    src: url('../assets/fonts/Hack-Regular.ttf') format('truetype')
-}
-
 .ssh-pre__content
 {
     font-family: 'Hack', 'monospace';

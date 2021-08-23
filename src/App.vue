@@ -6,3 +6,10 @@
     </div>
     <router-view/>
 </template>
+
+<style>
+@font-face {
+    font-family: 'Hack';
+    src: url('./assets/fonts/Hack-Regular.ttf') format('truetype')
+}
+</style>
