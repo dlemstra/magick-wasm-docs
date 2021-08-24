@@ -1,10 +1,14 @@
 <template>
      <CodeSample code="import { ImageMagick } from '@imagemagick/magick-wasm/image-magick'
+import { Channels } from '@imagemagick/magick-wasm/channels'
 
 const canvas = document.getElementById('canvasId')
 
 ImageMagick.readFromCanvas(canvas, (image) => {
-    image.blur()
+    const radius = 0
+    const sigma = 1
+    const channels = Channels.Composite
+    image.blur(radius, sigma, channels)
     image.writeToCanvas(canvas)
 })" />
 
@@ -33,6 +37,7 @@ export default class Blur extends Vue implements MagickExample {
 
     changeImage(image: IMagickImage): void {
         image.blur();
+
     }
 }
 </script>
