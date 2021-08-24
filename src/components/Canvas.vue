@@ -10,6 +10,7 @@ import { IMagickImage, MagickImage } from '@imagemagick/magick-wasm/magick-image
 import { MagickColor } from '@imagemagick/magick-wasm/magick-color';
 import { MagickReadSettings } from '@imagemagick/magick-wasm/settings/magick-read-settings';
 import { Vue } from 'vue-class-component'
+import { MagickGeometry } from '@imagemagick/magick-wasm/magick-geometry';
 
 export default class Canvas extends Vue {
     static dropAreaImage = Canvas.createDropAreaImage();
@@ -41,6 +42,7 @@ export default class Canvas extends Vue {
         const array = new Uint8Array(arrayBuffer)
         try {
             ImageMagick.read(array , (image) => {
+                image.resize(new MagickGeometry('1920x1080>'))
                 this.write(image)
             })
         } catch (exception) {
