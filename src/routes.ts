@@ -9,7 +9,8 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('./views/classes/MagickImage/Index.vue'),
         children: [
             { path: 'blur', component: () => import('./views/classes/MagickImage/Blur.vue') },
-            { path: 'charcoal', component: () => import('./views/classes/MagickImage/Charcoal.vue') }
+            { path: 'charcoal', component: () => import('./views/classes/MagickImage/Charcoal.vue') },
+            { path: 'rotate', component: () => import('./views/classes/MagickImage/Rotate.vue') }
         ]
     },
     { path: '/:pathMatch(.*)*', component: () => import('./views/NotFound.vue') }
