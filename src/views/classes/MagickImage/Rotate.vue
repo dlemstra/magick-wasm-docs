@@ -11,7 +11,7 @@ ImageMagick.readFromCanvas(canvas, (image) => {
 
     <h3>.rotate(degrees: number)</h3>
 
-    <button :onclick="showExample">Execute</button>
+    <input type="number" v-model="degrees" /><button :onclick="showExample">Execute</button>
 </template>
 
 <script lang="ts">
@@ -24,13 +24,15 @@ import CodeSample from '@/components/CodeSample.vue'
     emits: ["show-example"],
     components: {
         CodeSample,
-    }
+    },
 })
 export default class Blur extends Vue implements MagickExample {
+    degrees = 90
+
     showExample(): void { this.$emit('show-example', this) }
 
     changeImage(image: IMagickImage): void {
-        image.rotate(90);
+        image.rotate(this.degrees);
     }
 }
 </script>
