@@ -4,7 +4,7 @@
 const canvas = document.getElementById('canvasId')
 ImageMagick.readFromCanvas(canvas, (image) => {
     const radius = 0
-    const sigma = 0
+    const sigma = 1
     image.charcoal(radius, sigma)
     image.writeToCanvas(canvas)
 })" />
