@@ -11,7 +11,10 @@ ImageMagick.readFromCanvas(canvas, (image) => {
 
     <h3>.rotate(degrees: number)</h3>
 
-    <input type="number" v-model="degrees" /><button :onclick="showExample">Execute</button>
+    <div class="argument">
+        <label>Degrees:</label><input type="number" v-model="degrees" />
+    </div>
+    <button :onclick="showExample">Execute</button>
 </template>
 
 <script lang="ts">

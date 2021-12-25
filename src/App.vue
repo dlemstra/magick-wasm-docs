@@ -25,8 +25,18 @@ button {
     padding: 0.5em 1em;
     margin: 0 1em 1em 0;
 }
-button:hover{
+button:hover {
     color: pink;
     background-color: black;
+}
+.argument {
+    padding-bottom: 10px;
+}
+.argument label {
+    display: inline-block;
+    width: 80px;
+}
+.argument input {
+    width: 50px;
 }
 </style>
