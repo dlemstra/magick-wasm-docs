@@ -29,14 +29,12 @@ button:hover {
     color: pink;
     background-color: black;
 }
-.argument {
-    padding-bottom: 10px;
-}
 .argument label {
     display: inline-block;
     width: 80px;
 }
 .argument input {
     width: 50px;
+    margin-bottom: 10px;
 }
 </style>

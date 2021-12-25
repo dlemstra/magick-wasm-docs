@@ -10,6 +10,7 @@ const routes: Array<RouteRecordRaw> = [
         children: [
             { path: 'blur', component: () => import('./views/classes/MagickImage/Blur.vue') },
             { path: 'charcoal', component: () => import('./views/classes/MagickImage/Charcoal.vue') },
+            { path: 'liquidRescale', component: () => import('./views/classes/MagickImage/LiquidRescale.vue') },
             { path: 'rotate', component: () => import('./views/classes/MagickImage/Rotate.vue') }
         ]
     },

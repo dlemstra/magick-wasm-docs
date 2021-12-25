@@ -5,6 +5,7 @@
         <div>
             <router-link to="/classes/magick-image/blur">blur</router-link> |
             <router-link to="/classes/magick-image/charcoal">charcoal</router-link> |
+            <router-link to="/classes/magick-image/liquidRescale">liquidRescale</router-link> |
             <router-link to="/classes/magick-image/rotate">rotate</router-link>
             <router-view @showExample="showExample" />
         </div>
