@@ -9,9 +9,9 @@
     },
     "dependencies": {
         "@imagemagick/magick-wasm": "^0.0.11",
-        "core-js": "^3.21.1",
+        "core-js": "^3.22.3",
         "simple-syntax-highlighter": "^1.5.0",
-        "vue": "^3.2.31",
+        "vue": "^3.2.33",
         "vue-class-component": "^8.0.0-0",
         "vue-router": "^4.0.14"
     },
@@ -23,7 +23,7 @@
         "@vue/cli-plugin-router": "^4.5.17",
         "@vue/cli-plugin-typescript": "^4.5.17",
         "@vue/cli-service": "^4.5.17",
-        "@vue/compiler-sfc": "^3.2.31",
+        "@vue/compiler-sfc": "^3.2.33",
         "@vue/eslint-config-typescript": "^7.0.0",
         "cpy-cli": "^4.1.0",
         "eslint": "^6.7.2",
