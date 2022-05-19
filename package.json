@@ -10,28 +10,28 @@
   "dependencies": {
     "@imagemagick/magick-wasm": "^0.0.11",
     "axios": "^0.27.2",
-    "core-js": "^3.22.3",
+    "core-js": "^3.22.5",
     "crypto-browserify": "^3.12.0",
     "path-browserify": "^1.0.1",
     "simple-syntax-highlighter": "^2.2.0",
     "stream-browserify": "^3.0.0",
-    "vue": "^3.2.33",
+    "vue": "^3.2.34",
     "vue-class-component": "^8.0.0-0",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.15"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
     "@vue/cli-plugin-babel": "^5.0.4",
     "@vue/cli-plugin-eslint": "^5.0.4",
     "@vue/cli-plugin-router": "^5.0.4",
     "@vue/cli-plugin-typescript": "^5.0.4",
     "@vue/cli-service": "^5.0.4",
-    "@vue/compiler-sfc": "^3.2.33",
+    "@vue/compiler-sfc": "^3.2.34",
     "@vue/eslint-config-typescript": "^10.0.0",
     "cpy-cli": "^4.1.0",
-    "eslint": "^8.14.0",
+    "eslint": "^8.15.0",
     "eslint-plugin-vue": "^8.0.3",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.4"
   }
 }
