@@ -1,5 +1,6 @@
 <template>
     <div>
+        <a href="https://github.com/dlemstra/magick-wasm-docs"><img alt="Github logo" src="./assets/github.svg" /></a> |
         <router-link to="/">Home</router-link> |
         <router-link to="/classes/magick">Magick</router-link> |
         <router-link to="/classes/magick-image">MagickImage</router-link>
