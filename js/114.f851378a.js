@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmagick_wasm_docs"]=self["webpackChunkmagick_wasm_docs"]||[]).push([[114],{1114:function(n,a,e){e.r(a),e.d(a,{default:function(){return i}});var s=e(6252);function c(n,a,e,c,r,u){return(0,s.wg)(),(0,s.iD)("div",null,"Page not found")}var r=e(1124);class u extends r.w3{}var t=e(3744);const d=(0,t.Z)(u,[["render",c]]);var i=d}}]);
+//# sourceMappingURL=114.f851378a.js.map
