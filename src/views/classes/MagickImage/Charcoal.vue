@@ -27,7 +27,7 @@ import CodeSample from '@/components/CodeSample.vue'
         CodeSample,
     }
 })
-export default class Blur extends Vue implements MagickExample {
+export default class Charcoal extends Vue implements MagickExample {
     showExample(): void { this.$emit('show-example', this) }
 
     changeImage(image: IMagickImage): void {
