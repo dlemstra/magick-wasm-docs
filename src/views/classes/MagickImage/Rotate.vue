@@ -18,7 +18,7 @@ ImageMagick.readFromCanvas(canvas, (image) => {
 </template>
 
 <script lang="ts">
-import { IMagickImage } from '@imagemagick/magick-wasm/magick-image'
+import { IMagickImage } from '@imagemagick/magick-wasm'
 import { MagickExample } from '@/magick-example'
 import { Options, Vue } from 'vue-class-component'
 import CodeSample from '@/components/CodeSample.vue'

@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import { ImageMagick } from '@imagemagick/magick-wasm/image-magick'
+import { ImageMagick } from '@imagemagick/magick-wasm'
 import { MagickExample } from '@/magick-example'
 import Canvas from '@/components/Canvas.vue'
 

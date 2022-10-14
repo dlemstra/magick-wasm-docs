@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import { initializeImageMagick } from '@imagemagick/magick-wasm'
-import { Magick } from '@imagemagick/magick-wasm/magick'
+import { Magick } from '@imagemagick/magick-wasm'
 import App from './App.vue'
 import axios from 'axios'
 import routes from './routes'

@@ -4,13 +4,13 @@
 
 <script lang="ts">
 import 'simple-syntax-highlighter/dist/sshpre.css'
-import { Gravity } from '@imagemagick/magick-wasm/gravity';
+import { Gravity } from '@imagemagick/magick-wasm';
 import { ImageMagick } from '@imagemagick/magick-wasm'
-import { IMagickImage, MagickImage } from '@imagemagick/magick-wasm/magick-image'
-import { MagickColor } from '@imagemagick/magick-wasm/magick-color';
-import { MagickReadSettings } from '@imagemagick/magick-wasm/settings/magick-read-settings';
+import { IMagickImage, MagickImage } from '@imagemagick/magick-wasm'
+import { MagickColor } from '@imagemagick/magick-wasm';
+import { MagickReadSettings } from '@imagemagick/magick-wasm';
 import { Vue } from 'vue-class-component'
-import { MagickGeometry } from '@imagemagick/magick-wasm/magick-geometry';
+import { MagickGeometry } from '@imagemagick/magick-wasm';
 
 export default class Canvas extends Vue {
     static dropAreaImage = Canvas.createDropAreaImage();

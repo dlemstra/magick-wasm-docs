@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import { Magick } from '@imagemagick/magick-wasm/magick'
+import { Magick } from '@imagemagick/magick-wasm'
 import CodeSample from '@/components/CodeSample.vue'
 
 @Options({
@@ -35,7 +35,7 @@ export default class MagickView extends Vue {
         return Magick.supportedFormats
             .map(function(format) {
                 const description = format.description.replace('\'', '\\\'')
-                return `  { format: '${format.format}', description: '${description}', isReadable: ${format.isReadable}, isWritable: ${format.isWritable} }`
+                return `  { format: '${format.format}', description: '${description}', supportsReading: ${format.supportsReading}, supportsWriting: ${format.supportsWriting} }`
             }).join(",\n")
     }
 }
