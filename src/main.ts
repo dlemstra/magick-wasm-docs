@@ -6,7 +6,8 @@ import App from './App.vue'
 import axios from 'axios'
 import routes from './routes'
 
-initializeImageMagick().then(() => {
+const wasmLocation = new URL('@imagemagick/magick-wasm/magick.wasm', import.meta.url).href;
+initializeImageMagick(wasmLocation).then(() => {
     axios({
         url: new URL('./assets/fonts/Hack-Regular.ttf', import.meta.url).href,
         method: 'GET',
