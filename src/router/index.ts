@@ -22,6 +22,7 @@ const router = createRouter({
                 { path: 'rotate', component: () => import('@/views/classes/MagickImage/RotateView.vue') }
             ]
         },
+        { path: '/:pathMatch(.*)*', component: () => import('@/views/NotFoundView.vue') }
     ]
 })
 
