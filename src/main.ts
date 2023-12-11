@@ -1,30 +1,20 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
 import { initializeImageMagick } from '@imagemagick/magick-wasm'
 import { Magick } from '@imagemagick/magick-wasm'
 import App from './App.vue'
-import axios from 'axios'
-import routes from './routes'
+import router from './router'
 
-const wasmLocation = new URL('@imagemagick/magick-wasm/magick.wasm', import.meta.url).href;
+const wasmLocation = new URL('@imagemagick/magick-wasm/magick.wasm', import.meta.url);
 initializeImageMagick(wasmLocation).then(() => {
-    axios({
-        url: new URL('./assets/fonts/Hack-Regular.ttf', import.meta.url).href,
-        method: 'GET',
-        responseType: 'blob',
-    }).then(async (response) => {
-        const data = await response.data.arrayBuffer()
-        Magick.addFont('Hack', new Uint8Array(data))
+    const fontLocation = new URL('./assets/fonts/Hack-Regular.ttf', import.meta.url).href;
+    fetch(fontLocation).then((response) => {
+        response.arrayBuffer().then((buffer) => {
+            const font = new Uint8Array(buffer)
+            Magick.addFont('Hack', font)
 
-        const router = createRouter({
-            history: createWebHistory(process.env.BASE_URL),
-            routes
-        })
-
-        createApp(App)
-            .use(router)
-            .mount('#app')
+            createApp(App)
+                .use(router)
+                .mount('#app')
+        });
     });
-}).catch(err => {
-    throw err
 })

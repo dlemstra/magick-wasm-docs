@@ -1,11 +1,20 @@
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+</script>
+
 <template>
-    <div>
+  <header>
+    <div class="wrapper">
+      <nav>
         <a href="https://github.com/dlemstra/magick-wasm-docs"><img alt="Github logo" src="./assets/github.svg" /></a> |
-        <router-link to="/">Home</router-link> |
-        <router-link to="/classes/magick">Magick</router-link> |
-        <router-link to="/classes/magick-image">MagickImage</router-link>
+        <RouterLink to="/">Home</RouterLink> |
+        <RouterLink to="/classes/magick">Magick</RouterLink> |
+        <RouterLink to="/classes/magick-image">MagickImage</RouterLink>
+      </nav>
     </div>
-    <router-view/>
+  </header>
+
+  <RouterView />
 </template>
 
 <style>
@@ -13,6 +22,7 @@
     font-family: 'Hack';
     src: url('./assets/fonts/Hack-Regular.ttf') format('truetype')
 }
+
 button {
     cursor: pointer;
     font-family: 'Hack';
@@ -30,12 +40,20 @@ button:hover {
     color: pink;
     background-color: black;
 }
-.argument label {
+.arguments {
+    margin-top: 10px;
+}
+.arguments label {
     display: inline-block;
     width: 80px;
 }
-.argument input {
+.arguments input {
     width: 50px;
+    margin-bottom: 10px;
+}
+.arguments .multiselect {
+    display: inline-block;
+    width: 400px;
     margin-bottom: 10px;
 }
 </style>
