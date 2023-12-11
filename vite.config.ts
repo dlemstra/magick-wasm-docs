@@ -13,12 +13,12 @@ const baseConfig = {
         }
     },
     build: {
-    rollupOptions: {
-      output: {
-        chunkFileNames: `magick-[name]-[hash].js`,
-      },
+        rollupOptions: {
+            output: {
+                chunkFileNames: `magick-[name]-[hash].js`,
+            },
+        },
     },
-  },
 }
 
 const buildConfig = {
