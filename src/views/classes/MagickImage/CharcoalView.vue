@@ -21,6 +21,7 @@ const showExample = (): void => {
     <CodeSample code="import { ImageMagick } from '@imagemagick/magick-wasm/image-magick'
 
 const canvas = document.getElementById('canvasId')
+
 ImageMagick.readFromCanvas(canvas, (image) => {
     const radius = 0
     const sigma = 1
