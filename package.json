@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "run-p type-check \"build-only {@}\" && cpy ./dist/index.html . --rename 404.html",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
@@ -25,6 +25,7 @@
     "@vitejs/plugin-vue": "4.5.2",
     "@vue/eslint-config-typescript": "12.0.0",
     "@vue/tsconfig": "0.4.0",
+    "cpy-cli": "5.0.0",
     "eslint": "8.55.0",
     "eslint-plugin-vue": "9.19.2",
     "npm-run-all2": "^6.1.1",
