@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ImageMagick, Channels, Magick, MagickGeometry, EvaluateOperator } from '@imagemagick/magick-wasm'
+import { Magick } from '@imagemagick/magick-wasm'
 import CodeSample from '@/components/CodeSample.vue'
 
 const delegates = `> '${Magick.delegates}'`;
@@ -10,11 +10,6 @@ const supportedFormats = Magick.supportedFormats
         const description = format.description.replace('\'', '\\\'')
         return `  { format: '${format.format}', description: '${description}', supportsReading: ${format.supportsReading}, supportsWriting: ${format.supportsWriting} }`
     }).join(",\n");
-
-ImageMagick.read('logo:', image => {
-    image.evaluate(Channels.Red, new MagickGeometry(0, 0, 100, 295), EvaluateOperator.Set, 0);
-    console.log(image);
-});
 </script>
 
 <template>
