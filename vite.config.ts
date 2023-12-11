@@ -3,9 +3,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-    base: '',
+const baseConfig = {
     plugins: [
         vue()
     ],
@@ -14,4 +12,12 @@ export default defineConfig({
             '@': fileURLToPath(new URL('./src', import.meta.url))
         }
     }
-})
+}
+
+const buildConfig = {
+    ...baseConfig,
+    base: '/magick-wasm-docs/'
+}
+
+// https://vitejs.dev/config/
+export default defineConfig(({ command }) => command === 'build' ? buildConfig : baseConfig)
