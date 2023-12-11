@@ -11,7 +11,14 @@ const baseConfig = {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url))
         }
-    }
+    },
+    build: {
+    rollupOptions: {
+      output: {
+        chunkFileNames: `magick-[name]-[hash].js`,
+      },
+    },
+  },
 }
 
 const buildConfig = {
