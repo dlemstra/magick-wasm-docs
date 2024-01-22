@@ -62,7 +62,7 @@ const read = (func: (image: IMagickImage) => void): void => {
 
     ImageMagick.readFromCanvas(canvas.value, (image) => {
         func(image)
-    })
+    },{ willReadFrequently: true })
 }
 
 defineExpose({
