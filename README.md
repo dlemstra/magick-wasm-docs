@@ -7,9 +7,9 @@ Documentation for the [@imagemagick/magick-wasm](https://www.npmjs.com/package/@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Locally preview the production build
 ```
-npm run serve
+npm run preview
 ```
 
 ### Compiles and minifies for production
