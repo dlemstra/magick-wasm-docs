@@ -8,9 +8,10 @@ on:
     branches:
     - main
 
-name: main
 permissions:
   contents: write
+
+name: main
 jobs:
   update_github_pages:
     name: Update github pages
