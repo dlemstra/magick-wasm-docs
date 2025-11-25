@@ -9,6 +9,8 @@ on:
     - main
 
 name: main
+permissions:
+  contents: write
 jobs:
   update_github_pages:
     name: Update github pages
