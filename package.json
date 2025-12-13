@@ -25,7 +25,7 @@
     "@vitejs/plugin-vue": "5.1.2",
     "@vue/eslint-config-typescript": "13.0.0",
     "@vue/tsconfig": "0.5.1",
-    "cpy-cli": "5.0.0",
+    "cpy-cli": "6.0.0",
     "eslint": "8.57.0",
     "eslint-plugin-vue": "9.27.0",
     "npm-run-all2": "8.0.4",
