@@ -16,22 +16,22 @@
     "@vueform/multiselect": "2.6.11",
     "simple-syntax-highlighter": "3.1.1",
     "vue": "3.5.25",
-    "vue-router": "4.4.3"
+    "vue-router": "4.6.4"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "1.15.0",
-    "@tsconfig/node18": "18.2.4",
-    "@types/node": "24.10.1",
-    "@vitejs/plugin-vue": "5.1.2",
-    "@vue/eslint-config-typescript": "13.0.0",
-    "@vue/tsconfig": "0.5.1",
+    "@tsconfig/node18": "18.2.6",
+    "@types/node": "25.0.2",
+    "@vitejs/plugin-vue": "6.0.3",
+    "@vue/eslint-config-typescript": "14.6.0",
+    "@vue/tsconfig": "0.8.1",
     "cpy-cli": "6.0.0",
-    "eslint": "8.57.0",
-    "eslint-plugin-vue": "9.27.0",
+    "eslint": "9.39.2",
+    "eslint-plugin-vue": "10.6.2",
     "npm-run-all2": "8.0.4",
-    "typescript": "5.5.4",
-    "vite": "5.4.0",
+    "typescript": "5.9.3",
+    "vite": "7.2.7",
     "vite-plugin-node-polyfills": "0.24.0",
-    "vue-tsc": "2.0.29"
+    "vue-tsc": "3.1.8"
   }
 }
