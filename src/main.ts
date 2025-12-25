@@ -1,3 +1,8 @@
+/*
+  Copyright Dirk Lemstra https://github.com/dlemstra/magick-wasm-docs.
+  Licensed under the Apache License, Version 2.0.
+*/
+
 import { createApp } from 'vue'
 import { initializeImageMagick } from '@imagemagick/magick-wasm'
 import { Magick } from '@imagemagick/magick-wasm'
