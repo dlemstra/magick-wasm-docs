@@ -31,13 +31,13 @@ const options: ChannelOption[] = [
 const valueChanged = (value: Channels[]): void => {
     if (value.length == 0) {
         for (let i = 0; i < options.length; i++) {
-            options[i].disabled = false;
+            options[i]!.disabled = false;
         }
     }
 
     let channels = Channels.Undefined;
     for (let i = 0; i < value.length; i++) {
-        channels |= value[i];
+        channels |= value[i]!;
     }
     emit('update:modelValue', channels)
 }
@@ -45,16 +45,16 @@ const valueChanged = (value: Channels[]): void => {
 const optionSelected = (_value: Channels[], option: ChannelOption): void => {
     if (option.value == Channels.Undefined) {
         for (let i = 1; i < options.length; i++) {
-            options[i].disabled = true;
+            options[i]!.disabled = true;
         }
     } else if (option.value == Channels.Composite) {
-        options[0].disabled = true;
+        options[0]!.disabled = true;
         for (let i = 2; i < options.length; i++) {
-            options[i].disabled = true;
+            options[i]!.disabled = true;
         }
     } else {
-        options[0].disabled = true;
-        options[1].disabled = true;
+        options[0]!.disabled = true;
+        options[1]!.disabled = true;
     }
 }
 </script>
