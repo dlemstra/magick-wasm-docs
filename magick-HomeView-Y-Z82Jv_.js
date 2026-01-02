@@ -1,0 +1,1 @@
+import{_ as o}from"./magick-_plugin-vue_export-helper-DlAUqK2U.js";import{c as s,a,o as t}from"./assets/index-CoZb0VGs.js";const c="/magick-wasm-docs/assets/imagemagick-E7IvBLg-.svg",r={};function m(n,e){return t(),s("div",null,[...e[0]||(e[0]=[a("img",{alt:"ImageMagick logo",src:c},null,-1)])])}const g=o(r,[["render",m]]);export{g as default};
