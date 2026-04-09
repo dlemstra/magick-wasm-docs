@@ -1,0 +1,1 @@
+import{c as e,x as t}from"./magick-runtime-core.esm-bundler-ClpiTnDU.js";import{t as n}from"./magick-_plugin-vue_export-helper-CrLEzGzw.js";var r={},i={class:`arguments`};function a(n,r){return t(),e(`div`,i,`Page not found`)}var o=n(r,[[`render`,a]]);export{o as default};
