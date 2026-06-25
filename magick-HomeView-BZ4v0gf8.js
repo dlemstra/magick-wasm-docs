@@ -1,0 +1,1 @@
+import{a as e,c as t,x as n}from"./magick-runtime-core.esm-bundler-ClpiTnDU.js";import{t as r}from"./magick-_plugin-vue_export-helper-CrLEzGzw.js";var i={};function a(r,i){return n(),t(`div`,null,[...i[0]||=[e(`img`,{alt:`ImageMagick logo`,src:`/magick-wasm-docs/assets/imagemagick-E7IvBLg-.svg`},null,-1)]])}var o=r(i,[[`render`,a]]);export{o as default};
