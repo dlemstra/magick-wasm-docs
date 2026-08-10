@@ -1,0 +1,1 @@
+import{D as e,h as t,v as n}from"./assets/index-CeO-Avv-.js";import{t as r}from"./magick-_plugin-vue_export-helper-BDNMzG2s.js";var i={};function a(r,i){return e(),n(`div`,null,[...i[0]||=[t(`img`,{alt:`ImageMagick logo`,src:`/magick-wasm-docs/assets/imagemagick-E7IvBLg-.svg`},null,-1)]])}var o=r(i,[[`render`,a]]);export{o as default};

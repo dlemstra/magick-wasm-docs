@@ -1,0 +1,1 @@
+import{D as e,v as t}from"./assets/index-CeO-Avv-.js";import{t as n}from"./magick-_plugin-vue_export-helper-BDNMzG2s.js";var r={},i={class:`arguments`};function a(n,r){return e(),t(`div`,i,`Page not found`)}var o=n(r,[[`render`,a]]);export{o as default};
