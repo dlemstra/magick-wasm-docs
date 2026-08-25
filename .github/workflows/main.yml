@@ -10,7 +10,7 @@ on:
 
 permissions: {}
 
-name: main
+name: Main
 jobs:
   update_github_pages:
     name: Update github pages
