@@ -4,13 +4,13 @@
 */
 
 import { createApp } from 'vue'
-import { initializeImageMagick } from '@imagemagick/magick-wasm'
+import { initializeImageMagickx64 } from '@imagemagick/magick-wasm'
 import { Magick } from '@imagemagick/magick-wasm'
 import App from './App.vue'
 import router from './router'
 
-const wasmLocation = new URL('@imagemagick/magick-wasm/magick.wasm', import.meta.url);
-initializeImageMagick(wasmLocation).then(() => {
+const wasmLocation = new URL('@imagemagick/magick-wasm/x64/magick.wasm', import.meta.url);
+initializeImageMagickx64(wasmLocation).then(() => {
     const fontLocation = new URL('./assets/fonts/Hack-Regular.ttf', import.meta.url).href;
     fetch(fontLocation).then((response) => {
         response.arrayBuffer().then((buffer) => {
